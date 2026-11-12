@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Agregar poema · Au_Obregón</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/css/estilo.css"></head>
+<body>
+<div class="herramienta">
+  <h1>Agregar un poema</h1>
+  <p class="sub">Escribe o pega tu poema, elige su colección y copia el resultado. Esta página solo es para ti.</p>
+  <label for="t">Título</label><input id="t" type="text" placeholder="Por ejemplo: Nostalgia">
+  <label for="c">Colección</label>
+  <select id="c"><option value="amor">Amor</option><option value="ausencia">Ausencia</option><option value="tiempo">Tiempo</option><option value="silencio">Silencio</option></select>
+  <label for="x">Poema (deja una línea en blanco entre estrofas)</label><textarea id="x"></textarea>
+  <label for="k">Columnas al leerlo</label>
+  <select id="k"><option value="">Automático</option><option value="dos">Dos columnas (poemas largos)</option><option value="tres">Tres columnas (muy largos)</option></select>
+  <label>Resultado</label>
+  <pre id="o">Escribe el título y el poema…</pre>
+  <button class="copiar" id="b" type="button">Copiar resultado</button>
+  <ol class="pasos">
+    <li>Abre <code>js/poemas.js</code> con el Bloc de notas o tu editor.</li>
+    <li>Pega lo copiado justo después de la <b>última llave</b> <code>}</code> y antes de <code>];</code>.</li>
+    <li>Sube la imagen del poema como <code id="im">img/…jpg</code> y guarda el archivo en tu hosting.</li>
+  </ol>
+</div>
+<script>
+(function(){
+  var $ = function(i){ return document.getElementById(i); };
+  function slug(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+  function gen(){
+    var t = $('t').value.trim(), x = $('x').value.replace(/\r/g,'').trim();
+    if(!t || !x){ $('o').textContent = 'Escribe el título y el poema…'; $('im').textContent = 'img/…jpg'; return ''; }
+    var o = {id: slug(t), slug: $('c').value, titulo: t}; if($('k').value) o.cols = $('k').value; o.texto = x;
+    $('im').textContent = 'img/' + o.id + '.jpg';
+    var r = ',\n' + JSON.stringify(o, null, 1);
+    $('o').textContent = r; return r;
+  }
+  ['t','c','x','k'].forEach(function(i){ $(i).addEventListener('input', gen); });
+  $('b').addEventListener('click', function(){
+    var r = gen(); if(!r) return;
+    if(navigator.clipboard){ navigator.clipboard.writeText(r).then(function(){ $('b').textContent = 'Copiado ✓'; setTimeout(function(){ $('b').textContent = 'Copiar resultado'; },1800); }); }
+  });
+})();
+</script>
+</body></html>

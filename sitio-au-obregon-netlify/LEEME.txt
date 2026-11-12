@@ -1,0 +1,40 @@
+SITIO DE POEMAS · Au_Obregón
+
+ARCHIVOS
+  index.html              Inicio
+  amor.html, ausencia.html, tiempo.html, silencio.html   Colecciones
+  sobre-mi.html           Sobre mí
+  terminos.html           Términos y condiciones
+  derechos-de-autor.html  Derechos de autor
+  css/estilo.css          Estilos
+  js/app.js               Funciones del sitio
+  js/nav.js               Navegación sin recargar (hace que la música NO se corte al cambiar de sección)
+  public/js/poemas.js     TUS POEMAS (aquí se agregan y editan los textos)
+  js/musica.js            Música ambiental de fondo (se genera sola, sin archivos)
+  favicon.svg             Icono de la pestaña del navegador
+  sitemap.xml, robots.txt Para que Google encuentre todas las páginas
+  agregar-poema.html      Herramienta: ábrela en tu navegador para preparar un poema nuevo
+                          (no hace falta subirla al hosting)
+
+REDES SOCIALES
+  Instagram  https://www.instagram.com/au_obregon
+  TikTok     https://www.tiktok.com/@au_obregn
+  Medium     https://medium.com/@Obreg
+  Si algún día cambias de usuario en TikTok o Medium: abre cada .html con un editor de texto y usa "Buscar y reemplazar"
+  (por ejemplo: tiktok.com/@au_obregn  ->  tiktok.com/@NUEVO_USUARIO). Aparecen en el pie de todas las
+  páginas, en los botones de inicio y de "Sobre mí", y en los datos para buscadores (index.html y sobre-mi.html).
+
+MÚSICA SIN CORTES
+  La música sigue sonando al cambiar de sección cuando el sitio está en un hosting (https://...) o en
+  un servidor local. Si abres los archivos con doble clic (file://) el navegador no permite la
+  navegación sin recarga: ahí el sitio funciona igual, pero la música se reinicia al cambiar de página
+  (entra en ~1 segundo en vez de ~4).
+
+ANTES DE PUBLICAR
+  1) Reemplaza TU-DOMINIO.com por tu dominio real en el <head> de cada .html y en sitemap.xml y robots.txt.
+  2) Sube una imagen portada.jpg (1200x630) a la raíz.
+  3) Crea la carpeta img/ y sube las imágenes de cada poema con estos nombres:
+     se-fue.jpg, semanas.jpg, maldito-poeta.jpg, amor.jpg, julieta.jpg,
+     te-conoci.jpg, por-que-tu.jpg, uno-dos-tres.jpg, ayer-hoy-y-manana.jpg,
+     lluvia.jpg, querido-lector.jpg, una-vela.jpg
+  4) Sube todo a tu hosting (la carpeta completa) y verifica el dominio en Pinterest.

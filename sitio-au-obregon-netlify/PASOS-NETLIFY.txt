@@ -1,0 +1,30 @@
+PUBLICAR EN NETLIFY CON ME GUSTA COMPARTIDOS
+============================================
+
+Estructura:
+  public/                 El sitio (lo que ve la gente)
+  netlify/functions/      El contador de me gusta (no se ve desde fuera)
+  netlify.toml, package.json
+
+IMPORTANTE: arrastrar la carpeta a netlify.com/drop NO incluye el contador.
+Hay que subir por GitHub:
+
+1) Crea una cuenta en github.com y un repositorio nuevo (por ejemplo "poemas").
+2) En el repositorio: "Add file" -> "Upload files". Arrastra TODO el contenido de esta carpeta
+   (public, netlify, netlify.toml, package.json, .gitignore, etc.) y pulsa "Commit changes".
+   (Si no ves .gitignore, no pasa nada.)
+3) En app.netlify.com: "Add new project" -> "Import an existing project" -> GitHub -> elige el repositorio.
+   Los ajustes ya vienen en netlify.toml; solo pulsa "Deploy".
+4) Cuando termine, abre tu sitio, da like a un poema y recarga: el número debe mantenerse.
+   (En Netlify: Project -> Data & Storage -> Blobs -> "likes" verás los registros.)
+
+Cada cambio que subas al repositorio se publica solo.
+
+NOTAS
+- Cada visitante recibe un identificador aleatorio guardado en su navegador; así un mismo
+  navegador cuenta un solo like por poema. Alguien con conocimientos técnicos podría inflar
+  los números; para un sitio de poemas es un riesgo bajo.
+- Los likes que alguien ya dio antes de esta versión quedan solo en su navegador y no suman.
+- Para agregar poemas: public/js/poemas.js. La herramienta herramienta-agregar-poema.html se
+  abre en tu navegador desde esta carpeta (no se sube).
+- Cambia TU-DOMINIO.com por tu dirección real en los .html, sitemap.xml y robots.txt (dentro de public/).

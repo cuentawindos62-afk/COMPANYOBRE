@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Verificación de dominio de Pinterest -->
+<meta name="p:domain_verify" content="86e47cde57786ec61d0ab9e50dd42ba2">
+<title>Ausencia · Poemas de Au_Obregón</title>
+<meta name="description" content="Lo que queda cuando alguien se va. Poemas de Au_Obregón.">
+<meta name="author" content="Au_Obregón">
+<meta name="theme-color" content="#0e0a08">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Au_Obregón">
+<meta property="og:title" content="Ausencia · Poemas de Au_Obregón">
+<meta property="og:description" content="Lo que queda cuando alguien se va. Poemas de Au_Obregón.">
+<meta property="og:url" content="https://TU-DOMINIO.com/ausencia.html">
+<meta property="og:image" content="https://TU-DOMINIO.com/portada.jpg">
+<link rel="canonical" href="https://TU-DOMINIO.com/ausencia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-coleccion="ausencia">
+<canvas id="polvo"></canvas>
+<div id="luz"></div>
+<div id="progreso"></div>
+<nav id="nav">
+  <a class="logo" href="index.html">Au_Obregón</a>
+  <button class="burger" id="burger" aria-label="Menú">☰</button>
+  <div class="links" id="links"><a href="index.html">Inicio</a><a href="amor.html">Amor</a><a href="ausencia.html" class="act">Ausencia</a><a href="tiempo.html">Tiempo</a><a href="silencio.html">Silencio</a><a href="sobre-mi.html">Sobre mí</a></div>
+</nav>
+
+<section>
+  <div class="cab pagina-cab">
+    <small>Colección</small>
+    <h1>Ausencia</h1>
+    <p>Lo que queda cuando alguien se va.</p>
+    <span class="cuenta" id="cuentaCat"></span>
+  </div>
+  <div class="orn"></div>
+</section>
+
+<section>
+  <div class="buscar"><input id="q" type="search" placeholder="buscar un verso…" aria-label="Buscar en Ausencia"></div>
+  <main>
+    <div class="muro">
+<noscript><p class="vacio" style="display:block">Activa JavaScript para leer los poemas.</p></noscript>
+    </div>
+    <div class="vacio" id="vacio">Ningún verso dice eso… todavía.</div>
+  </main>
+</section>
+
+<section>
+  <div class="cab" style="padding-top:50px"><small>Sigue leyendo</small><h2 style="font-size:clamp(2rem,5vw,3rem)">Otras colecciones</h2></div>
+  <div class="cats cats-otras"><a class="catcard hoja" href="amor.html">
+  <span class="num">I</span>
+  <h3>Amor</h3><div class="orn"></div>
+  <p>Versos para quien llegó sin hacer ruido y se quedó.</p>
+  <span class="cant" data-cant="amor"></span>
+  <span class="ir">Entrar</span>
+</a>
+<a class="catcard hoja" href="tiempo.html">
+  <span class="num">III</span>
+  <h3>Tiempo</h3><div class="orn"></div>
+  <p>Ayer, hoy y mañana: lo que cambia y lo que no.</p>
+  <span class="cant" data-cant="tiempo"></span>
+  <span class="ir">Entrar</span>
+</a>
+<a class="catcard hoja" href="silencio.html">
+  <span class="num">IV</span>
+  <h3>Silencio</h3><div class="orn"></div>
+  <p>Cartas, luz y lluvia: lo que se dice sin decirse.</p>
+  <span class="cant" data-cant="silencio"></span>
+  <span class="ir">Entrar</span>
+</a>
+</div>
+</section>
+
+<footer>
+  <span class="firma">Au_Obregón</span>
+  <div class="pie-links">
+    <a href="terminos.html">Términos y condiciones</a>
+    <a href="derechos-de-autor.html">Derechos de autor</a>
+    <a href="https://pin.it/1bqkFeXUR" target="_blank" rel="noopener me">Pinterest</a>
+    <a href="https://www.instagram.com/au_obregon" target="_blank" rel="noopener me">Instagram</a>
+    <a href="https://www.tiktok.com/@au_obregn" target="_blank" rel="noopener me">TikTok</a>
+    <a href="https://medium.com/@Obreg" target="_blank" rel="noopener me">Medium</a>
+  </div>
+  © 2026 Au_Obregón · Todos los derechos reservados.
+</footer>
+<div class="lector" id="lector" role="dialog" aria-modal="true" aria-label="Poema">
+  <canvas id="fx"></canvas>
+  <div class="pagina hoja" id="pagina"></div>
+  <div class="nav-poemas"><button id="ant">← anterior</button><button id="sig">siguiente →</button></div>
+</div>
+<div class="herr">
+  <button id="menos" aria-label="Letra más pequeña" style="font-size:.95rem">A</button>
+  <button id="mas" aria-label="Letra más grande" style="font-size:1.45rem">A</button>
+  <button id="cerrar" aria-label="Cerrar" style="font-size:1.7rem">×</button>
+</div>
+<div class="lprog" id="lprog"></div>
+<script src="js/poemas.js"></script>
+<script src="js/app.js"></script>
+<script src="js/musica.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>
